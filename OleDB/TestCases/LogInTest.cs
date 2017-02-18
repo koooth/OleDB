@@ -3,6 +3,7 @@ using OleDB.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.Configuration;
+using System.Diagnostics;
 
 namespace OleDB.TestCases
 {
@@ -21,6 +22,8 @@ namespace OleDB.TestCases
 
             var loginPage = new LoginPage(driver);
                 loginPage.LoginToApplication("LogInTest");
+
+            Debug.WriteLine("This is the end");
 
                 driver.Close();
         }
